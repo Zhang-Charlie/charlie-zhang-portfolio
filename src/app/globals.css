@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0b2d87;
-  --foreground: #e9eefc;
-  --accent: #d88733;
-  --hero-to: #203c98;
+  --background: #1B3093; /* top gradient color */
+  --foreground: #ffffff;
+  --accent: #D68846;
+  --hero-to: #2D4498; /* bottom gradient color */
 }
 
 @theme inline {
@@ -16,8 +16,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1B3093;
+    --foreground: #2D4498;
   }
 }
 
