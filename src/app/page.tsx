@@ -279,6 +279,7 @@ export default function Home() {
   <div className="mx-auto max-w-6xl space-y-8">
     <h3 className="text-lg font-semibold sm:text-xl">Education</h3>
 
+    {/* UCD */}
     <div className="rounded-2xl border border-[#1f1f1f] bg-[#121212] p-6 shadow-lg">
       {/* Logo left, text right */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
@@ -289,7 +290,7 @@ export default function Home() {
             alt="UCD logo"
             width={240}
             height={240}
-            className="h-50 w-auto"
+            className="h-40 w-auto"
           />
         </div>
 
@@ -297,7 +298,7 @@ export default function Home() {
         <div>
           <h4 className="text-2xl font-bold text-white">University College Dublin</h4>
           <p className="mt-1 text-base text-slate-300">
-            <strong>BSc Computer Science with Data Science &amp; AI</strong> (2023 – 2027)
+            <strong>BSc Computer Science with Data Science &amp; AI</strong> (Sep 2023 – May 2027)
             <br />
             Dublin, Ireland
           </p>
@@ -330,8 +331,50 @@ export default function Home() {
         </div>
       </div>
     </div>
+
+    {/* BFEI */}
+    <div className="rounded-2xl border border-[#1f1f1f] bg-[#121212] p-6 shadow-lg">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
+        {/* BFEI logo on the left */}
+        <div className="shrink-0 ml-4 sm:ml-6">
+
+          <Image
+            src="/logos/bfei-logo.png"
+            alt="BFEI logo"
+            width={200}
+            height={200}
+            className="h-40 w-auto"
+          />
+        </div>
+
+        {/* BFEI text */}
+        <div>
+          <h4 className="text-2xl font-bold text-white">
+            Blackrock Further Education Institute
+          </h4>
+          <p className="mt-1 text-base text-slate-300">
+            <strong>QQI Level 5 Certificate in Software Development — Full Distinctions (Top Grade)</strong>
+            <br />
+            Sep 2022 – May 2023
+            <br />
+            Blackrock, Dublin
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-6 sm:pl-10">
+        <h5 className="mb-2 text-lg font-semibold text-white">Focus Areas</h5>
+        <ul className="space-y-2 text-sm leading-relaxed text-slate-300">
+          <li>• Built strong foundations in software development and programming</li>
+          <li>• Developed problem-solving, study skills, and academic discipline</li>
+          <li>• Provided the groundwork to progress into Computer Science at UCD</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
+
+
 {/* Experience Section */}
 <section className="w-full bg-[#0f0f0f] px-4 py-14 text-slate-100 sm:px-6">
   <div className="mx-auto max-w-5xl space-y-12">
