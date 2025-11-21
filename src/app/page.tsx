@@ -86,41 +86,77 @@ const projects = [
 
 const certificates = [
   {
-    title: "Google AI Hackathon – 3rd Place",
-    issuer: "Google",
-    date: "2025",
-    logo: "/logos/google.png",
-    url: "https://example.com/google-ai-hackathon",
+    title: "AWS AI & ML Scholars",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Issued Aug 2025",
+    logo: "/logos/aws.png",
+    url: "#",
   },
   {
     title: "TryHackMe Cybersecurity Training",
     issuer: "TryHackMe",
-    date: "Ongoing",
+    date: "Issued Nov 2025",
     logo: "/logos/tryhackme.png",
-    url: "https://tryhackme.com/p/your-profile",
+    url: "https://tryhackme.com/certificate/THM-ORBKATBNGZ",
   },
   {
-    title: "First Aid Responder",
-    issuer: "Irish Red Cross",
-    date: "2024",
-    logo: "/logos/firstaid.png",
-    url: "https://example.com/first-aid",
+    title: "AWS Educate Machine Learning Foundations",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Issued Aug 2025",
+    logo: "/logos/aws.png",
+    url: "https://www.credly.com/badges/ffd9c8a6f651-4abe-9e3d-613f80ea2c3c/public_url",
   },
   {
-    title: "Sample Tech Certificate",
-    issuer: "Tech Org",
-    date: "2024",
-    logo: "/logos/sample-tech.png",
-    url: "https://example.com/tech-cert",
+    title: "AWS Educate Introduction to Generative AI",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Issued Mar 2025",
+    logo: "/logos/aws.png",
+    url: "https://www.credly.com/badges/0f5ad8f3-9b71-4551-9f79-ee95f5bf3c04/linked_in_profile",
   },
   {
-    title: "Sample Data Certificate",
-    issuer: "Data Org",
-    date: "2024",
-    logo: "/logos/sample-data.png",
-    url: "https://example.com/data-cert",
+    title: "Introducing Generative AI with AWS",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Issued Aug 2025",
+    logo: "/logos/aws.png",
+    url: "https://www.udacity.com/certificate/e/a653f2c2-670b-11f0-8d0a-43c02c584261",
+  },
+  {
+    title: "Introduction to Cybersecurity",
+    issuer: "Cisco",
+    date: "Issued Jul 2025",
+    logo: "/logos/cisco.png",
+    url: "https://www.credly.com/badges/4ba8074e-e73e-42c3-a85d-2792b9fc1dbf/linked_in_profile",
+  },
+  {
+    title: "AWS Educate Introduction to Cloud 101",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Issued Jul 2025",
+    logo: "/logos/aws.png",
+    url: "https://www.credly.com/badges/21dd2938-6dfe-4806-8c7f-cb7ad6943e2d/public_url",
+  },
+  {
+    title: "AWS Emerging Talent Community Digital Badge",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Issued Jul 2025",
+    logo: "/logos/aws.png",
+    url: "#",
+  },
+  {
+    title: "Microsoft AI Skills Fest | Festival participation",
+    issuer: "Microsoft",
+    date: "Issued Jul 2025",
+    logo: "/logos/microsoft.png",
+    url: "https://learn.microsoft.com/api/achievements/share/en-gb/CharlieZhang/YECNCC9R?sharingId=E25DB3E4400FD988",
+  },
+  {
+    title: "Learn Git & GitHub Course",
+    issuer: "Codecademy",
+    date: "Issued Mar 2025",
+    logo: "/logos/codecademy.png",
+    url: "https://www.codecademy.com/profiles/ZhangCharlie/certificates/a8ab218d5950c29861635cc0bf12fd13",
   },
 ]
+
 
 function GithubIcon({ className = "h-4 w-4" }) {
   return (
@@ -575,40 +611,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CERTIFICATES */}
-      <section className="w-full bg-[#0f0f0f] px-4 py-14 text-slate-100 sm:px-6">
-        <div className="mx-auto max-w-6xl space-y-8">
-          <h3 className="text-lg font-semibold sm:text-xl">
-            Certifications &amp; Achievements
-          </h3>
+       {/* CERTIFICATES */}
+      <section className="w-full bg-[#0f0f0f] px-4 py-14 text-slate-100">
+        <div className="mx-auto max-w-6xl space-y-10">
+          <h3 className="text-xl font-semibold">Certificates</h3>
+{/* <h3 className="text-lg font-semibold sm:text-xl text-center"> */}
 
-          <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:grid-cols-5">
-            {certificates.map((cert) => (
-              <a
-                key={cert.title}
-                href={cert.url}
-                target="_blank"
-                rel="noreferrer"
-                className="group flex flex-col items-center text-center transition-transform duration-200 hover:-translate-y-1"
-              >
-                <Image
-                  src={cert.logo}
-                  alt={cert.issuer}
-                  width={100}
-                  height={100}
-                  className="mb-3 h-20 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
-                />
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 text-center ">
+            {certificates.map(c => (
+              <a key={c.title} href={c.url} target="_blank" className="group flex flex-col items-center cursor-pointer">
+                <Image src={c.logo} alt={c.title} width={100} height={100}
+                  className="h-20 w-auto object-contain group-hover:scale-105 transition" />
 
-                <p className="text-sm font-semibold text-white transition-colors duration-200 group-hover:text-[var(--color-accent)]">
-                  {cert.title}
+                <p className="mt-3 text-sm font-semibold group-hover:text-[var(--color-accent)] transition">
+                  {c.title}
                 </p>
 
-                <p className="mt-1 text-xs text-slate-400">{cert.issuer}</p>
-
-                <p className="text-[10px] text-slate-500">{cert.date}</p>
+                <p className="text-xs text-slate-400">{c.issuer}</p>
+                <p className="text-[10px] text-slate-500">{c.date}</p>
               </a>
             ))}
           </div>
+
         </div>
       </section>
     </main>
