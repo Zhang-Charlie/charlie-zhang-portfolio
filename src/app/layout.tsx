@@ -11,9 +11,14 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Charlie Z hang | Portfolio",
+  title: "Charlie Zhang | Portfolio",
   description:
     "Hello! I'm Charlie Zhang, a UCD CS student driven by curiosity and a love for technology.",
+  icons: {
+    icon: "/logos/cz-logo.png",
+    shortcut: "/logos/cz-logo.png",
+    apple: "/logos/cz-logo.png",
+  },
 };
 
 export default function RootLayout({
