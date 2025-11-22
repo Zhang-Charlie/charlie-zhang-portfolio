@@ -72,6 +72,66 @@ const techStack = [
   },
 ]
 
+const education = [
+  {
+    school: "University College Dublin",
+    logo: "/logos/ucd-logo.png",
+    width: 240,
+    height: 240,
+    degree: "BSc Computer Science with Data Science & AI",
+    dates: "Sep 2023 – May 2027",
+    location: "Dublin, Ireland",
+    highlights: [
+      "Class Representative for ~150 students (Stage 2 Rep)",
+      "SU Class Representative for ~150 students (Stage 3 Students' Union Rep)",
+      "Represented 1,200+ Computer Science students on the Science Taught Programmes Board (STPB)",
+      "UCD NetSoc Ordinary Committee Member",
+      "Peer Mentor",
+      "Access Leader",
+      "Career Mentoring Programme",
+      "UCD Formula Student — Powertrain Department",
+    ],
+    coursework: [
+      "Algorithms & Data Structures",
+      "Operating Systems in x86 Assembly, RISC-V, & Linux",
+      "Computer Networking",
+      "Databases & Information Systems (SQL)",
+      "Software Engineering Project (C & Java)",
+      "Data Science in Python",
+      "Introduction to AI",
+      "Information Security",
+      "Discrete Mathematics & Formal Foundations",
+      "Linear Algebra, Probability & Statistics with Python",
+      "Functional Programming in Scheme",
+      "Programming experience with Java, C, Python, SQL, Scheme, and x86 Assembly",
+
+    ],
+  },
+
+  {
+    school: "Blackrock Further Education Institute",
+    logo: "/logos/bfei-logo.png",
+    width: 240,
+    height: 240,
+    degree: "QQI Level 5 Certificate in Software Development (5M0529)",
+    dates: "Sep 2022 – May 2023",
+    location: "Dublin, Ireland",
+    grade: "Distinction (Top Grade)",
+    highlights: [
+      "Graduated with Full Distinction (Highest Grade Awarded)",
+      "Built strong foundations in software development and programming",
+      "Developed strong problem-solving ability and technical reasoning skills",
+    ],
+    coursework: [
+      "Object Oriented Programming (Java)",
+      "Database Methods",
+      "Software Architecture",
+      "Web Authoring (HTML & CSS)",
+    ],
+  },
+]
+
+
 const tools = [
   {
     name: "Git",
@@ -292,14 +352,15 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
 
         {/* scrollable content */}
         <div className="mt-4 flex-1 overflow-y-auto pr-1 space-y-5">
+          
           {/* screenshot */}
-          <div className="overflow-hidden rounded-xl border border-[#1f1f1f] bg-[#0a0a0a]">
+          <div className="mx-auto max-w-3xl overflow-hidden rounded-xl border border-[#1f1f1f] bg-[#0a0a0a]">
             <Image
               src={project.imageSrc}
               alt={project.title}
               width={1200}
               height={630}
-              className="w-full h-auto object-contain"
+              className="w-full h-auto max-h-[420px] object-contain"
             />
           </div>
 
@@ -538,132 +599,82 @@ export default function Home() {
     onClose={() => setSelectedProject(null)}
   />
 )}
+{/* Education */}
+<section className="w-full bg-[#0f0f0f] px-4 py-14 text-slate-100 sm:px-6">
+  <div className="mx-auto max-w-6xl space-y-8">
+    <h3 className="text-lg font-semibold sm:text-xl">Education</h3>
 
-      {/* Education Section */}
-      <section className="w-full bg-[#0f0f0f] px-4 py-14 text-slate-100 sm:px-6">
-        <div className="mx-auto max-w-6xl space-y-8">
-          <h3 className="text-lg font-semibold sm:text-xl">Education</h3>
+    {education.map((edu) => (
+      <div
+        key={edu.school}
+        className="rounded-2xl border border-[#1f1f1f] bg-[#121212] p-6 shadow-lg"
+      >
+        {/* top: logo + main text */}
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
+          <div className="shrink-0">
+            <Image
+              src={edu.logo}
+              alt={`${edu.school} logo`}
+              width={edu.width}
+              height={edu.height}
+              className="h-40 w-auto"
+            />
+          </div>
 
-          {/* UCD */}
-<div className="rounded-2xl border border-[#1f1f1f] bg-[#121212] p-6 shadow-lg">
-  {/* top: logo + main text */}
-  <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
-    <div className="shrink-0">
-      <Image
-        src="/logos/ucd-logo.png"
-        alt="UCD logo"
-        width={240}
-        height={240}
-        className="h-40 w-auto"
-      />
-    </div>
+          <div>
+            <h4 className="text-2xl font-bold text-white">{edu.school}</h4>
 
-    <div>
-            <h4 className="text-2xl font-bold text-white">
-        University College Dublin
-      </h4>
-      <p className="mt-1 text-base text-slate-300">
-        <strong>BSc Computer Science with Data Science &amp; AI</strong>
-      </p>
-      <p className="text-sm text-slate-400">
-        Sep 2023 – May 2027
-      </p>
-      <p className="text-sm text-slate-300">
-        Dublin, Ireland
-      </p>
+            <p className="mt-1 text-base text-slate-300">
+              <strong>{edu.degree}</strong>
+            </p>
 
-    </div>
-  </div>
+            <p className="text-sm text-slate-400">{edu.dates}</p>
+            <p className="text-sm text-slate-300">{edu.location}</p>
 
-  {/* bottom: highlights + coursework, aligned under the text block */}
-  <div className="mt-6">
-    <div className="grid gap-6 sm:ml-[11rem] sm:grid-cols-2">
-      {/* tweak sm:ml-[11rem] until it lines up perfectly with your heading */}
-
-      {/* Highlights */}
-      <div>
-        <h5 className="mb-2 text-lg font-semibold text-white">Highlights</h5>
-        <ul className="space-y-2 text-sm leading-relaxed text-slate-300">
-          <li>• Class Representative for ~150 students</li>
-          <li>• Student Rep — Science Taught Programmes Board</li>
-          <li>• UCD NetSoc Ordinary Committee Member</li>
-          <li>• Peer Mentor &amp; Access Leader</li>
-        </ul>
-      </div>
-
-      {/* Technical Coursework */}
-      <div>
-        <h5 className="mb-2 text-lg font-semibold text-white">
-          Technical Coursework
-        </h5>
-        <ul className="space-y-2 text-sm leading-relaxed text-slate-300">
-          <li>• Data Structures &amp; Algorithms</li>
-          <li>• Operating Systems (C, RISC-V)</li>
-          <li>• Machine Learning &amp; AI</li>
-          <li>• Database Systems &amp; SQL</li>
-          <li>• Computer Networks</li>
-          <li>• Software Engineering Principles</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-          {/* BFEI */}
-          <div className="rounded-2xl border border-[#1f1f1f] bg-[#121212] p-6 shadow-lg">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
-              {/* BFEI logo on the left */}
-              <div className="shrink-0 ml-1 sm:ml-3">
-                <Image
-                  src="/logos/bfei-logo.png"
-                  alt="BFEI logo"
-                  width={200}
-                  height={200}
-                  className="h-40 w-auto"
-                />
-              </div>
-
-              {/* BFEI text */}
-              <div>
-                <h4 className="text-2xl font-bold text-white">
-                  Blackrock Further Education Institute
-                </h4>
-                <p className="mt-1 text-base text-slate-300">
-                  <strong>
-                    QQI Level 5 Certificate in Software Development — Full
-                    Distinctions (Top Grade)
-                  </strong>
-                  <br />
-                  Sep 2022 – May 2023
-                  <br />
-                  Dublin, Ireland
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-6 sm:pl-10">
-              <h5 className="mb-2 text-lg font-semibold text-white">
-                Focus Areas
-              </h5>
-              <ul className="space-y-2 text-sm leading-relaxed text-slate-300">
-                <li>
-                  • Built strong foundations in software development and
-                  programming
-                </li>
-                <li>
-                  • Developed problem-solving, study skills, and academic
-                  discipline
-                </li>
-                <li>
-                  • Provided the groundwork to progress into Computer Science at
-                  UCD
-                </li>
-              </ul>
-            </div>
+            {edu.grade && (
+              <p className="mt-1 text-sm text-slate-300">
+                Grade: <strong>{edu.grade}</strong>
+              </p>
+            )}
           </div>
         </div>
-      </section>
+
+        {/* bottom: highlights + coursework */}
+        <div className="mt-6">
+          <div className="grid gap-6 sm:ml-[11rem] sm:grid-cols-2">
+            {/* Highlights */}
+            <div>
+              <h5 className="mb-2 text-xl font-semibold text-white">
+                Highlights
+              </h5>
+              <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed text-slate-300">
+                {edu.highlights.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+
+            </div>
+
+            {/* Technical Coursework */}
+            <div>
+              <h5 className="mb-2 text-lg font-semibold text-white">
+                Technical Coursework
+              </h5>
+              <ul className="list-disc pl-6 space-y-2 text-sm leading-relaxed text-slate-300">
+                {edu.coursework.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+
 
       {/* Experience Section */}
       <section className="w-full bg-[#0f0f0f] px-4 py-14 text-slate-100 sm:px-6">
