@@ -166,55 +166,81 @@ const tools = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg",
   },
 ]
-
 export const experience = [
   {
-    title: "University College Dublin",
-    subtitle: "Leadership & Societies · 2023 – Present",
+    title: "SU Class Representative",
+    subtitle: "UCD Students’ Union · Sep 2025 – Present",
     logo: "/logos/ucd-logo.png",
-    side: "right", // text on the right, logo on the left
-    points: [
-      "SU Class Representative for ~150 students",
-      "Represented 1,200+ Computer Science students on the Science Taught Programmes Board (STPB)",
-      "UCD NetSoc Ordinary Committee Member",
-      "Peer Mentor & Access Leader"
-    ]
-  },
-  {
-    title: "UCD Formula Student — Powertrain",
-    subtitle: "Vehicle Control Software · 2024 – Present",
-    logo: "/logos/formula.png",
-    side: "left", // text on the left, logo on the right
-    points: [
-      "Working on Vehicle Control Unit (VCU) software",
-      "Embedded C/C++ for sensors & dashboard logic",
-      "Real-hardware testing and reliability improvements"
-    ]
-  },
-  {
-    title: "Software & Technical Projects",
-    subtitle: "Personal & Team Projects",
-    logo: "/logos/projects.png",
     side: "right",
     points: [
-      "Orca Website — HTML/CSS project",
-      "HexOust — Java strategy game",
-      "PathPilot — Google AI Hackathon (3rd place)"
+      "Represent the School of Computer Science on the Science Taught Programmes Board (STPB) for 1,200+ students",
+      "Collaborate with faculty and the Students’ Union on academic policy and assessment improvements",
+      "Ordinary Council Member for UCD NetSoc, attending SU Council and helping organise tech events",
+      "Support communication between Stage 3 students, the School of Computer Science, and UCDSU"
     ]
   },
+
   {
-    title: "Work & Volunteering",
-    subtitle: "Customer-facing & Ops Roles",
-    logo: "/logos/work.png",
+    title: "Powertrain Software Engineer (VCU)",
+    subtitle: "UCD Formula Student · Sep 2025 – Present",
+    logo: "/logos/formula.png",
     side: "left",
     points: [
-      "Ocean Catering & Hospitality",
-      "The Coffee Bean (Dublin)",
-      "Warehouse Operative — Amazon & Uniphar Group",
-      "St. Mary's Hospital work experience"
+      "Develop embedded C and C++ software for the Vehicle Control Unit (VCU)",
+      "Implement sensor integration, dashboard logic, and safety behaviour for an electric race car",
+      "Perform real-hardware debugging and reliability improvements on the powertrain system"
+    ]
+  },
+
+  {
+    title: "Artificial Intelligence Content Trainer",
+    subtitle: "Outlier · Apr 2025 – Present · Remote",
+    logo: "/logos/outlier.png",
+    side: "right",
+    points: [
+      "Write and review computer science questions and answers to train generative AI models",
+      "Evaluate AI-generated responses for correctness, clarity, and depth",
+      "Provide detailed technical feedback and prompt designs to improve model behaviour"
+    ]
+  },
+
+  {
+    title: "Class Representative",
+    subtitle: "University College Dublin · Sep 2024 – Aug 2025",
+    logo: "/logos/ucd-logo.png",
+    side: "left",
+    points: [
+      "Elected to represent a class of ~150 Computer Science students",
+      "Collected feedback, raised academic concerns, and negotiated deadline and assessment adjustments",
+      "Organised a five-a-side football match with NetSoc funding to help classmates relax and unwind from academic pressure"
+    ]
+  },
+
+  {
+    title: "Sales and Warehouse Colleague",
+    subtitle: "Currys plc · Jul 2023 – Aug 2024 · Part-time & Full-time",
+    logo: "/logos/currys.png",
+    side: "right",
+    points: [
+      "Worked part-time during university term and full-time during peak periods at Ireland’s No.1 Currys store",
+      "Advised customers on laptops, TVs, and smart devices while building strong technical product knowledge",
+      "Supported stock handling, deliveries, and inventory updates to keep sales and logistics running smoothly"
+    ]
+  },
+
+  {
+    title: "Warehouse Operative",
+    subtitle: "Amazon · Aug 2022 – Oct 2022 · Full-time",
+    logo: "/logos/amazon.png",
+    side: "left",
+    points: [
+      "Supported the launch of Amazon’s first fulfilment facility in Ireland, assisting with setup and daily operations",
+      "Operated scanners and pallet trucks to manage inventory efficiently in a fast-paced warehouse",
+      "Completed First Aid training and served as a certified First Aider while helping onboard new team members"
     ]
   }
 ]
+
 
 
 const projects: Project[] = [
@@ -672,10 +698,12 @@ export default function Home() {
                     <Image
                       src={item.logo}
                       alt={item.title}
-                      width={120}
-                      height={120}
-                      className="h-24 w-auto"
+                      width={200}
+                      height={200}
+                      className="h-40 w-auto"
                     />
+
+
                   </div>
 
                   {/* dot */}
@@ -716,9 +744,9 @@ export default function Home() {
                     <Image
                       src={item.logo}
                       alt={item.title}
-                      width={120}
-                      height={120}
-                      className="h-24 w-auto"
+                      width={200}
+                      height={200}
+                      className="h-40 w-auto"
                     />
                   </div>
                 </>
