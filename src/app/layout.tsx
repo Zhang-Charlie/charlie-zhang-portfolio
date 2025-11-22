@@ -15,7 +15,10 @@ export const metadata: Metadata = {
   description:
     "Hello! I'm Charlie Zhang, a UCD CS student driven by curiosity and a love for technology.",
   icons: {
-    icon: "/logos/cz-logo.png",
+    icon: [
+      { url: "/logos/cz-logo.png", type: "image/png" },
+      { url: "/logos/cz-logo.png", rel: "icon", type: "image/png" },
+    ],
     shortcut: "/logos/cz-logo.png",
     apple: "/logos/cz-logo.png",
   },
