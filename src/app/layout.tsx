@@ -16,13 +16,15 @@ export const metadata: Metadata = {
     "Hello! I'm Charlie Zhang, a UCD CS student driven by curiosity and a love for technology.",
   icons: {
     icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png" },
       { url: "/logos/cz-logo.png", type: "image/png" },
-      { url: "/logos/cz-logo.png", rel: "icon", type: "image/png" },
     ],
-    shortcut: "/logos/cz-logo.png",
-    apple: "/logos/cz-logo.png",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.png",
   },
 };
+
 
 export default function RootLayout({
   children,
