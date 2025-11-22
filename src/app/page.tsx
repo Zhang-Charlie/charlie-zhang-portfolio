@@ -6,10 +6,13 @@ import Image from 'next/image'
 type Project = {
   title: string
   description: string
-  liveUrl: string
-  githubUrl: string
   imageSrc: string
+  githubUrl?: string
+  liveUrl?: string
+  videoSrc?: string
 }
+
+
 type ProjectModalProps = {
   project: Project
   onClose: () => void
@@ -131,6 +134,15 @@ const education = [
   },
 ]
 
+const pathPilotHighlights = [
+  "Built using React, TypeScript, and Firebase",
+  "AI path-generation using custom reasoning logic",
+  "Multi-step student questionnaire with dynamic UI",
+  "Created for the Google AI Student Hackathon and placed 3rd overall",
+  "Developed collaboratively in a fast-paced hackathon environment",
+]
+
+
 
 const tools = [
   {
@@ -166,6 +178,8 @@ const tools = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg",
   },
 ]
+
+
 export const experience = [
   {
     title: "SU Class Representative",
@@ -242,33 +256,45 @@ export const experience = [
 ]
 
 
-
 const projects: Project[] = [
+{
+  title: "PathPilot",
+  description:
+    "AI-powered student career guidance app built for the Google AI Student Hackathon, earning 3rd place overall. Generates personalised university and career paths using LLM reasoning, weighted scoring, and a multi-step questionnaire.",
+  imageSrc: "/projects/pathpilot_end.jpg",     // main thumbnail
+  videoSrc: "/projects/pathpilot_video.mp4",   // demo video
+}
+
+,
+
   {
-    title: "ScholaFlow",
+    title: "HexOust",
     description:
-      "Classroom dashboard concept with colorful course cards and a clean UI layout.",
-    liveUrl: "https://orca-website-ten.vercel.app/",
-    githubUrl: "https://github.com/trevorphilbrick/orca-website-ten",
-    imageSrc: "/projects/Orca-website.png",
+      "Turn-based hex-grid strategy game built in Java. Implemented custom hex coordinate mapping, movement logic, and rendering. Developed collaboratively using Git and clean OOP structure.",
+    liveUrl: "#",  
+    githubUrl: "https://github.com/Zhang-Charlie/Hexoust",
+    imageSrc: "/projects/hexoust.png",
   },
+
   {
-    title: "Queyk Dashboard",
+    title: "Sorting Algorithms Benchmark",
     description:
-      "Seismic activity monitoring dashboard with charts and status cards.",
-    liveUrl: "https://orca-website-ten.vercel.app/",
-    githubUrl: "https://github.com/trevorphilbrick/orca-website-ten",
-    imageSrc: "/projects/queyk.png",
+      "Java implementations of Bubble Sort, Merge Sort, Quick Sort, and Counting Sort benchmarked across multiple input sizes. Includes time-complexity analysis and performance graphs.",
+    liveUrl: "#",  
+    githubUrl: "#",                   // add repo once uploaded
+    imageSrc: "/projects/sorting-benchmark.png",
   },
+
   {
-    title: "Orca Website",
+    title: "Used Car Market Analysis",
     description:
-      "Marketing site concept exploring gradients, layout, and storytelling.",
-    liveUrl: "https://orca-website-ten.vercel.app/",
-    githubUrl: "https://github.com/trevorphilbrick/orca-website-ten",
-    imageSrc: "/projects/orca.png",
+      "End-to-end Python data project: scraped used car listings, cleaned the dataset, loaded it into SQLite, and performed analytical SQL queries with visual insights using Pandas and Matplotlib.",
+    liveUrl: "#",  
+    githubUrl: "#",                   // add repo
+    imageSrc: "/projects/car-analysis.png",
   },
 ]
+
 
 
 const certificates = [
@@ -425,51 +451,82 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
 
         {/* subtle divider */}
         <div className="mt-4 h-px w-full bg-white/5" />
-
         {/* scrollable content */}
-        <div className="mt-4 flex-1 overflow-y-auto pr-1 space-y-5">
-          
-          {/* screenshot */}
-          <div className="mx-auto max-w-3xl overflow-hidden rounded-xl border border-[#1f1f1f] bg-[#0a0a0a]">
-            <Image
-              src={project.imageSrc}
-              alt={project.title}
-              width={1200}
-              height={630}
-              className="w-full h-auto max-h-[420px] object-contain"
-            />
-          </div>
+<div className="mt-4 flex-1 overflow-y-auto pr-1 space-y-5">
+  {/* screenshot */}
+  <div className="mx-auto max-w-3xl overflow-hidden rounded-xl border border-[#1f1f1f] bg-[#0a0a0a]">
+    <Image
+      src={project.imageSrc}
+      alt={project.title}
+      width={1200}
+      height={630}
+      className="w-full h-auto max-h-[420px] object-contain"
+    />
+  </div>
 
-          {/* about section */}
-          <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wide text-slate-400">
-              About this project
-            </h4>
-            <p className="mt-2 text-sm leading-relaxed text-slate-300">
-              {project.description}
-            </p>
-          </div>
+  {/* ABOUT SECTION */}
+  <div className="mt-2">
+    <h4 className="text-sm font-semibold uppercase tracking-wide text-slate-400">
+      About this project
+    </h4>
 
-          {/* actions */}
-          <div className="flex flex-wrap gap-3 pt-2">
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-lg bg-white/10 px-4 py-2 text-sm text-slate-200 hover:bg-white/20 transition"
-            >
-              View GitHub
-            </a>
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-lg bg-[var(--color-accent)] px-4 py-2 text-sm font-semibold text-black hover:opacity-90 transition"
-            >
-              Visit live project
-            </a>
-          </div>
-        </div>
+    {/* main description for all projects */}
+    <p className="mt-2 text-sm leading-relaxed text-slate-300">
+      {project.description}
+    </p>
+
+    {/* extra bullet points just for PathPilot */}
+    {project.title === "PathPilot" && (
+      <ul className="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
+        {pathPilotHighlights.map(item => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    )}
+  </div>
+
+  {/* VIDEO PREVIEW – only for PathPilot */}
+  {project.title === "PathPilot" && (
+    <div className="mt-6">
+      <h4 className="text-sm font-semibold uppercase tracking-wide text-slate-400">
+        Demo video
+      </h4>
+
+      <video
+        src="/projects/pathpilot_video.mp4"
+        controls
+        className="mt-3 w-full max-h-[420px] rounded-xl border border-[#1f1f1f] object-cover"
+      />
+    </div>
+  )}
+
+  {/* actions */}
+  <div className="flex flex-wrap gap-3 pt-2">
+    {project.githubUrl && (
+      <a
+        href={project.githubUrl}
+        target="_blank"
+        rel="noreferrer"
+        className="rounded-lg bg-white/10 px-4 py-2 text-sm text-slate-200 hover:bg-white/20 transition"
+      >
+        View GitHub
+      </a>
+    )}
+
+    {project.liveUrl && (
+      <a
+        href={project.liveUrl}
+        target="_blank"
+        rel="noreferrer"
+        className="rounded-lg bg-[var(--color-accent)] px-4 py-2 text-sm font-semibold text-black hover:opacity-90 transition"
+      >
+        Visit live project
+      </a>
+    )}
+  </div>
+
+</div>
+
       </div>
     </div>
   )
@@ -513,6 +570,11 @@ export function TechStackSection() {
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const [showMore, setShowMore] = useState(false)
+
+  // 👇 add these two lines here (NOT inside return)
+  const firstRow: Project[] = projects.slice(0, 3)
+  const moreProjects: Project[] = projects.slice(3)
 
 
 
@@ -605,13 +667,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROJECTS SECTION */}
+
+{/* PROJECTS SECTION */}
 <section className="w-full bg-[#0f0f0f] px-4 py-14 text-slate-100 sm:px-6">
   <div className="mx-auto max-w-6xl space-y-8">
     <h3 className="text-lg font-semibold sm:text-xl">Recent projects</h3>
 
+    {/* FIRST ROW – always visible */}
     <div className="grid gap-8 md:grid-cols-3">
-      {projects.map((project) => (
+      {firstRow.map((project: Project) => (
         <div
           key={project.title}
           className="rounded-2xl border border-[#1f1f1f] bg-[#121212] p-4 shadow-lg transition-transform duration-200 hover:-translate-y-1 cursor-pointer"
@@ -638,26 +702,31 @@ export default function Home() {
               {project.title}
             </h4>
             <div className="flex items-center gap-2 text-slate-300">
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="rounded p-1 transition-colors duration-150 hover:bg-white/10"
-              >
-                <GithubIcon className="h-4 w-4" />
-              </a>
+  {project.githubUrl && (
+    <a
+      href={project.githubUrl}
+      target="_blank"
+      rel="noreferrer"
+      onClick={(e) => e.stopPropagation()}
+      className="rounded p-1 transition-colors duration-150 hover:bg-white/10"
+    >
+      <GithubIcon className="h-4 w-4" />
+    </a>
+  )}
 
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="rounded p-1 transition-colors duration-150 hover:bg-white/10"
-              >
-                <ExternalLinkIcon className="h-4 w-4" />
-              </a>
-            </div>
+  {project.liveUrl && (
+    <a
+      href={project.liveUrl}
+      target="_blank"
+      rel="noreferrer"
+      onClick={(e) => e.stopPropagation()}
+      className="rounded p-1 transition-colors duration-150 hover:bg-white/10"
+    >
+      <ExternalLinkIcon className="h-4 w-4" />
+    </a>
+  )}
+</div>
+
           </div>
 
           <p className="mt-2 text-sm text-slate-300">
@@ -666,8 +735,88 @@ export default function Home() {
         </div>
       ))}
     </div>
+
+    {/* SECOND ROW – ONLY SHOWS WHEN showMore = true */}
+    {showMore && (
+      <div className="grid gap-8 md:grid-cols-3 mt-10">
+        {moreProjects.map((project: Project) => (
+
+          <div
+            key={project.title}
+            className="rounded-2xl border border-[#1f1f1f] bg-[#121212] p-4 shadow-lg transition-transform duration-200 hover:-translate-y-1 cursor-pointer"
+            onClick={() => setSelectedProject(project)}
+          >
+            {/* screenshot */}
+            <div className="rounded-[1.6rem] bg-[#050509] p-2 shadow-[0_18px_50px_rgba(0,0,0,0.6)]">
+              <div className="rounded-[1.3rem] bg-[#111827] p-2">
+                <div className="aspect-video overflow-hidden rounded-[1.1rem]">
+                  <Image
+                    src={project.imageSrc}
+                    alt={project.title}
+                    width={1280}
+                    height={720}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* title + links */}
+            <div className="mt-4 flex items-center gap-3">
+              <h4 className="text-lg font-semibold text-white">
+                {project.title}
+              </h4>
+
+              <div className="flex items-center gap-2 text-slate-300">
+  {project.githubUrl && (
+    <a
+      href={project.githubUrl}
+      target="_blank"
+      rel="noreferrer"
+      onClick={(e) => e.stopPropagation()}
+      className="rounded p-1 transition-colors duration-150 hover:bg-white/10"
+    >
+      <GithubIcon className="h-4 w-4" />
+    </a>
+  )}
+
+  {project.liveUrl && (
+    <a
+      href={project.liveUrl}
+      target="_blank"
+      rel="noreferrer"
+      onClick={(e) => e.stopPropagation()}
+      className="rounded p-1 transition-colors duration-150 hover:bg-white/10"
+    >
+      <ExternalLinkIcon className="h-4 w-4" />
+    </a>
+  )}
+</div>
+
+            </div>
+
+            <p className="mt-2 text-sm text-slate-300">
+              {project.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    )}
+
+    {/* LOAD MORE BUTTON */}
+    {projects.length > 3 && (
+      <div className="flex justify-center mt-10">
+        <button
+          onClick={() => setShowMore(!showMore)}
+          className="rounded-full border border-white/10 bg-white/5 px-6 py-2 text-sm font-semibold text-slate-200 hover:bg-white/10 transition"
+        >
+          {showMore ? "Show less" : "Load more projects"}
+        </button>
+      </div>
+    )}
   </div>
 </section>
+
 
 {selectedProject && (
   <ProjectModal
