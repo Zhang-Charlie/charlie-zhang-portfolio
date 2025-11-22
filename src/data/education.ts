@@ -1,0 +1,57 @@
+import { EducationItem } from "@/types"
+
+export const education: EducationItem[] = [
+  {
+    school: "University College Dublin",
+    logo: "/logos/ucd-logo.png",
+    width: 240,
+    height: 240,
+    degree: "BSc Computer Science with Data Science & AI",
+    dates: "Sep 2023 - May 2027",
+    location: "Dublin, Ireland",
+    highlights: [
+      "Class Representative for ~150 students (Stage 2 Rep)",
+      "SU Class Representative for ~150 students (Stage 3 Students' Union Rep)",
+      "Represented 1,200+ Computer Science students on the Science Taught Programmes Board (STPB)",
+      "UCD NetSoc Ordinary Committee Member",
+      "Peer Mentor",
+      "Access Leader",
+      "Career Mentoring Programme",
+      "UCD Formula Student - Powertrain Department",
+    ],
+    coursework: [
+      "Algorithms & Data Structures",
+      "Operating Systems (x86, RISC-V, Linux)",
+      "Computer Networking",
+      "Databases & SQL",
+      "Software Engineering (C & Java)",
+      "Python for Data Science",
+      "Introduction to AI & Information Security",
+      "Discrete Mathematics & Linear Algebra",
+      "Probability & Statistics with Python",
+      "Functional Programming in Scheme",
+      "Experience with Java, C, Python, SQL, Scheme, and x86 Assembly",
+    ],
+  },
+  {
+    school: "Blackrock Further Education Institute",
+    logo: "/logos/bfei-logo.png",
+    width: 240,
+    height: 240,
+    degree: "QQI Level 5 Certificate in Software Development (5M0529)",
+    dates: "Sep 2022 - May 2023",
+    location: "Dublin, Ireland",
+    grade: "Distinction (Top Grade)",
+    highlights: [
+      "Graduated with Full Distinction (Highest Grade Awarded)",
+      "Built strong foundations in software development and programming",
+      "Developed strong problem-solving ability and technical reasoning skills",
+    ],
+    coursework: [
+      "Object Oriented Programming (Java)",
+      "Database Methods",
+      "Software Architecture",
+      "Web Authoring (HTML & CSS)",
+    ],
+  },
+]

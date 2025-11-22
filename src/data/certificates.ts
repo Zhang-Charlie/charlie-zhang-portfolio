@@ -1,0 +1,74 @@
+import { Certificate } from "@/types"
+
+export const certificates: Certificate[] = [
+  {
+    title: "AWS AI & ML Scholars",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Issued Aug 2025",
+    logo: "/logos/aws.png",
+    url: "#",
+  },
+  {
+    title: "TryHackMe Cybersecurity Training",
+    issuer: "TryHackMe",
+    date: "Issued Nov 2025",
+    logo: "/logos/tryhackme.png",
+    url: "https://tryhackme.com/certificate/THM-ORBKATBNGZ",
+  },
+  {
+    title: "AWS Educate Machine Learning Foundations",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Issued Aug 2025",
+    logo: "/logos/aws.png",
+    url: "https://www.credly.com/badges/ffd9c8a6f651-4abe-9e3d-613f80ea2c3c/public_url",
+  },
+  {
+    title: "AWS Educate Introduction to Generative AI",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Issued Mar 2025",
+    logo: "/logos/aws.png",
+    url: "https://www.credly.com/badges/0f5ad8f3-9b71-4551-9f79-ee95f5bf3c04/linked_in_profile",
+  },
+  {
+    title: "Introducing Generative AI with AWS",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Issued Aug 2025",
+    logo: "/logos/aws.png",
+    url: "https://www.udacity.com/certificate/e/a653f2c2-670b-11f0-8d0a-43c02c584261",
+  },
+  {
+    title: "Introduction to Cybersecurity",
+    issuer: "Cisco",
+    date: "Issued Jul 2025",
+    logo: "/logos/cisco.png",
+    url: "https://www.credly.com/badges/4ba8074e-e73e-42c3-a85d-2792b9fc1dbf/linked_in_profile",
+  },
+  {
+    title: "AWS Educate Introduction to Cloud 101",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Issued Jul 2025",
+    logo: "/logos/aws.png",
+    url: "https://www.credly.com/badges/21dd2938-6dfe-4806-8c7f-cb7ad6943e2d/public_url",
+  },
+  {
+    title: "AWS Emerging Talent Community Digital Badge",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Issued Jul 2025",
+    logo: "/logos/aws.png",
+    url: "#",
+  },
+  {
+    title: "Microsoft AI Skills Fest | Festival participation",
+    issuer: "Microsoft",
+    date: "Issued Jul 2025",
+    logo: "/logos/microsoft.png",
+    url: "https://learn.microsoft.com/api/achievements/share/en-gb/CharlieZhang/YECNCC9R?sharingId=E25DB3E4400FD988",
+  },
+  {
+    title: "Learn Git & GitHub Course",
+    issuer: "Codecademy",
+    date: "Issued Mar 2025",
+    logo: "/logos/codecademy.png",
+    url: "https://www.codecademy.com/profiles/ZhangCharlie/certificates/a8ab218d5950c29861635cc0bf12fd13",
+  },
+]
