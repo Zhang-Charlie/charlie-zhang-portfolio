@@ -9,13 +9,6 @@ export const certificates: Certificate[] = [
     url: "#",
   },
   {
-    title: "Pre Security",
-    issuer: "TryHackMe",
-    date: "Issued Nov 2025",
-    logo: "/logos/tryhackme.png",
-    url: "https://tryhackme.com/certificate/THM-ORBKATBNGZ",
-  },
-  {
     title: "AWS Educate Machine Learning Foundations",
     issuer: "Amazon Web Services (AWS)",
     date: "Issued Aug 2025",
@@ -42,6 +35,13 @@ export const certificates: Certificate[] = [
     date: "Issued Jul 2025",
     logo: "/logos/cisco.png",
     url: "https://www.credly.com/badges/4ba8074e-e73e-42c3-a85d-2792b9fc1dbf/linked_in_profile",
+  },
+  {
+    title: "Pre Security",
+    issuer: "TryHackMe",
+    date: "Issued Nov 2025",
+    logo: "/logos/tryhackme.png",
+    url: "https://tryhackme.com/certificate/THM-ORBKATBNGZ",
   },
   {
     title: "AWS Educate Introduction to Cloud 101",
