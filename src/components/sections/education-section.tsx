@@ -41,7 +41,7 @@ export function EducationSection() {
                   <li>SU Class Representative</li>
                   <li>Access Leader &amp; Peer Mentor</li>
                   <li>UCD NetSoc Ordinary Committee Member</li>
-                  <li>Powertrain Software Engineer - UCD Formula Student</li>
+                  <li>Powertrain Software Engineer (VCU) - UCD Formula Student</li>
                 </ul>
               </div>
 
