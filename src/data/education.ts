@@ -11,8 +11,8 @@ export const education: EducationItem[] = [
     location: "Dublin, Ireland",
     highlights: [
       "Science Taught Programmes Board - Computer Science Representative for ~1,200+ students",
-      "Class Representative for ~150 students (Stage 2 Rep)",
-      "SU Class Representative for ~150 students (Stage 3 Students' Union Rep)",
+      "Class Representative for ~150 students (Stage 2)",
+      "SU Class Representative for ~150 students (Stage 3)",
       "UCD NetSoc Ordinary Committee Member",
       "Peer Mentor",
       "Access Leader",
