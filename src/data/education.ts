@@ -10,9 +10,9 @@ export const education: EducationItem[] = [
     dates: "Sep 2023 - May 2027",
     location: "Dublin, Ireland",
     highlights: [
+      "Science Taught Programmes Board - Computer Science Representative for ~1,200+ students",
       "Class Representative for ~150 students (Stage 2 Rep)",
       "SU Class Representative for ~150 students (Stage 3 Students' Union Rep)",
-      "Represented 1,200+ Computer Science students on the Science Taught Programmes Board (STPB)",
       "UCD NetSoc Ordinary Committee Member",
       "Peer Mentor",
       "Access Leader",
@@ -30,7 +30,6 @@ export const education: EducationItem[] = [
       "Discrete Mathematics & Linear Algebra",
       "Probability & Statistics with Python",
       "Functional Programming in Scheme",
-      "Experience with Java, C, Python, SQL, Scheme, and x86 Assembly",
     ],
   },
   {

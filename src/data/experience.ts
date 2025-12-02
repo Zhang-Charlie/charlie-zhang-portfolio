@@ -2,14 +2,22 @@ import { ExperienceItem } from "@/types"
 
 export const experience: ExperienceItem[] = [
   {
-    title: "SU Class Representative",
+    title: "Science Taught Programmes Board - Computer Science Representative",
     subtitle: "UCD Students' Union - Sep 2025 - Present",
-    logo: "/logos/ucd-logo.png",
+    logo: "/logos/su.png",
     side: "right",
     points: [
-      "Represent the School of Computer Science on the Science Taught Programmes Board (STPB) for 1,200+ students",
+      "Represent the School of Computer Science on the Science Taught Programmes Board for 1,200+ students",
+      "Review proposed changes to curriculum structure, assessment weightings, and module offerings"
+    ],
+  },
+  {
+    title: "SU Class Representative",
+    subtitle: "UCD Students' Union - Sep 2025 - Present",
+    logo: "/logos/su.png",
+    side: "left",
+    points: [
       "Collaborate with faculty and the Students' Union on academic policy and assessment improvements",
-      "Ordinary Council Member for UCD NetSoc, attending SU Council and helping organise tech events",
       "Support communication between Stage 3 students, the School of Computer Science, and UCDSU",
     ],
   },
@@ -17,7 +25,7 @@ export const experience: ExperienceItem[] = [
     title: "Powertrain Software Engineer (VCU)",
     subtitle: "UCD Formula Student - Sep 2025 - Present",
     logo: "/logos/formula.png",
-    side: "left",
+    side: "right",
     points: [
       "Develop embedded C and C++ software for the Vehicle Control Unit (VCU)",
       "Implement sensor integration, dashboard logic, and safety behaviour for an electric race car",
@@ -28,11 +36,21 @@ export const experience: ExperienceItem[] = [
     title: "Artificial Intelligence Content Trainer",
     subtitle: "Outlier - Apr 2025 - Present - Remote",
     logo: "/logos/outlier.png",
-    side: "right",
+    side: "left",
     points: [
       "Write and review computer science questions and answers to train generative AI models",
       "Evaluate AI-generated responses for correctness, clarity, and depth",
       "Provide detailed technical feedback and prompt designs to improve model behaviour",
+    ],
+  },
+  {
+    title: "Access Leader",
+    subtitle: "UCD Access and Lifelong Learning - Mar 2025 - Present",
+    logo: "/logos/access.png",
+    side: "right",
+    points: [
+      "Delivered campus tours and outreach activities for diverse groups of prospective students",
+      "Assisted UCD Access and Lifelong Learning staff with event setup, registration, and student engagement activities",
     ],
   },
   {
