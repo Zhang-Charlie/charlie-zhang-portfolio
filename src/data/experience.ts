@@ -66,7 +66,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     title: "Sales and Warehouse Colleague",
-    subtitle: "Currys plc - Jul 2023 - Aug 2024 - Part-time & Full-time",
+    subtitle: "Currys plc - Jul 2023 - Aug 2024 -  Full-time & Part-time",
     logo: "/logos/currys.png",
     side: "right",
     points: [
