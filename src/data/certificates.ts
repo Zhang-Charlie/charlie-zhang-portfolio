@@ -30,6 +30,13 @@ export const certificates: Certificate[] = [
     url: "https://www.udacity.com/certificate/e/a653f2c2-670b-11f0-8d0a-43c02c584261",
   },
   {
+    title: "Docker Essentials: A Developer Introduction",
+    issuer: "IBM",
+    date: "Issued Dec 2025",
+    logo: "/logos/dockerBadge.png",
+    url: "https://www.credly.com/badges/6bed8f05-dffe-4c6c-b5f7-211732b405ab/public_url",
+  },
+  {
     title: "Introduction to Cybersecurity",
     issuer: "Cisco",
     date: "Issued Jul 2025",
