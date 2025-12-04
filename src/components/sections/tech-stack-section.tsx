@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 import { techStack } from "@/data/tech-stack"
 
 export function TechStackSection() {
@@ -14,7 +16,7 @@ export function TechStackSection() {
               key={name}
               className="group flex flex-col items-center gap-2 transition-transform duration-200 hover:-translate-y-1"
             >
-              <img
+              <Image
                 src={src}
                 alt={name}
                 className={`object-contain transition-transform duration-200 group-hover:scale-105 ${
@@ -23,6 +25,8 @@ export function TechStackSection() {
                 loading="lazy"
                 decoding="async"
                 referrerPolicy="no-referrer"
+                width={10}
+                height={10}
               />
               <span className="text-sm font-medium text-gray-200 transition-colors duration-200 group-hover:text-white">
                 {name}

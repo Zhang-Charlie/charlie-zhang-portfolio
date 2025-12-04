@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export function ContactSection() {
   return (
     <section id="contact" className="w-full bg-[#050509] px-4 py-16 text-slate-100 sm:px-6">
@@ -40,7 +42,7 @@ export function ContactSection() {
                 rel="noreferrer"
                 className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 transition hover:border-[var(--color-accent)]/80 hover:bg-[var(--color-accent)]/10 hover:-translate-y-0.5"
               >
-                <img src="/logos/github.png" alt="GitHub" className="h-4 w-4" />
+                <Image src="/logos/github.png" alt="GitHub" className="h-4 w-4" width={4} height={4} />
                 <span>GitHub</span>
               </a>
 
@@ -50,7 +52,13 @@ export function ContactSection() {
                 rel="noreferrer"
                 className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 transition hover:border-[var(--color-accent)]/80 hover:bg-[var(--color-accent)]/10 hover:-translate-y-0.5"
               >
-                <img src="/logos/linkedin.svg" alt="LinkedIn" className="h-5 w-5 object-contain" />
+                <Image
+                  src="/logos/linkedin.svg"
+                  alt="LinkedIn"
+                  className="h-5 w-5 object-contain"
+                  width={5}
+                  height={5}
+                />
                 <span>LinkedIn</span>
               </a>
             </div>

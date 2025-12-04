@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 import { tools } from "@/data/tools"
 
 export function ToolsSection() {
@@ -12,13 +14,15 @@ export function ToolsSection() {
               key={name}
               className="group flex flex-col items-center gap-2 transition-transform duration-200 hover:-translate-y-1"
             >
-              <img
+              <Image
                 src={src}
                 alt={name}
                 className="h-10 w-10 object-contain transition-transform duration-200 group-hover:scale-105"
                 loading="lazy"
                 decoding="async"
                 referrerPolicy="no-referrer"
+                width={10}
+                height={10}
               />
               <span className="text-sm font-medium text-gray-200 transition-colors duration-200 group-hover:text-white">
                 {name}

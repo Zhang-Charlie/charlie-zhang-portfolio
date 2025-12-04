@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Image from "next/image"
 import { Project } from "@/types"
 
@@ -10,11 +10,8 @@ type ProjectModalProps = {
 }
 
 export function ProjectModal({ project, onClose }: ProjectModalProps) {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(true)
 
-  useEffect(() => {
-    setOpen(true)
-  }, [])
 
   const handleClose = () => {
     setOpen(false)
